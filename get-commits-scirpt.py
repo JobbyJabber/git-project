@@ -20,6 +20,7 @@ def instruction():
     - There is a problem when providing exception for http error. Might show exception instead of crashing while URL dosen't exist.
     - It will be extended for branch parameter
     - Needs to fix dupes in DB. At the moment duplicates exists.  
+    - Add comments
 
     Author GitID: @JobbyJabber
     ________________________________________________________________
@@ -78,31 +79,3 @@ def getCommits(user, repo):
 if __name__ == "__main__":
     main()
 
-
-
-
-# def deleteIfExist():
-    
-
-
-#def dbConfig(user, repo):
-    # db = TinyDB('test8.json')
-
-    # repoTable = db.table("REPOS")
-    # userTable = db.table("USERS")
-
-    # repoTable.insert({'RepoName': repo})
-    # userTable.insert({'UserName': user})
-
-
-
-# otherTable.insert({'sha': sha})
-# check = db.search(otherTable == f'{sha}')
-# print(db)
-# if check in db:
-#     print("chuj")
-# else:
-#     exit()
-# print(check)
-# print(type(check))
-# # if check == False:
