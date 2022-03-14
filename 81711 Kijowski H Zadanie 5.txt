@@ -1,0 +1,59 @@
+EXERCISE 5.01
+
+use PACKT_ONLINE_SHOP;
+
+SELECT ProductName AS 'High-value Products', NetRetailPrice
+FROM Products
+WHERE NetRetailPrice > 14.99
+
+EXERCISE 5.02
+
+SELECT ProductName,NetRetailPrice
+FROM Products
+WHERE NetRetailPrice BETWEEN 14.99 AND 50 
+ORDER BY NetRetailPrice;
+
+EXERCISE 5.03
+
+SELECT ProductName,NetRetailPrice
+FROM Products
+WHERE ProductName != 'tomato sauce'
+ORDER BY NetRetailPrice;
+
+EXERCISE 5.04
+
+SELECT FirstName AS 'Customers from LA', Phone 
+FROM Customers
+WHERE Phone LIKE '(310)%';
+
+EXERCISE 5.05
+
+SELECT FirstName, LastName, Phone 
+FROM Customers
+WHERE FirstName LIKE '___';
+
+EXERCISE 5.06
+
+SELECT MiddleName, LastName, Phone 
+FROM Customers
+WHERE FirstName IS NULL;
+
+EXERCISE 5.07
+
+SELECT *
+FROM Customers
+WHERE FirstName = 'Joe' AND Phone LIKE '(310)%';
+
+SELECT FirstName, LastName, Phone,Notes
+FROM Customers
+WHERE FirstName LIKE 'Jo%' AND (Phone LIKE '(310)%' OR Phone LIKE '(210)%') AND NOT LastName = 'Carter';
+
+ACTIVITY 5.01
+
+SELECT   
+    ProductName as 'Product Name',  
+    NetRetailPrice as 'Product Retail Price', 
+    AvailableQuantity as 'Available Quantity'    
+From Products   
+WHERE NetRetailPrice <= 24.99   
+    AND AvailableQuantity >=38; 
